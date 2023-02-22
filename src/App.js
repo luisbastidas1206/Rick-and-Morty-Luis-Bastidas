@@ -10,7 +10,13 @@ function App () {
       <SearchBar
           onSearch={(characterID) => window.alert(characterID)}
         />
-        <hr />
+        <div>
+        -
+        </div>
+        <div>
+        -
+        </div>
+        
       <div>
         {/*<Card
           name={Rick.name}

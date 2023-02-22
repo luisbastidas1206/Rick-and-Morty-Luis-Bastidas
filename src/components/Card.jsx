@@ -7,8 +7,9 @@ console.log(props)
 
    return (
       <div className="card">
-         
-         <button onClick={() => props.onClose ()}>X</button>
+         <div className='buttonContainer'>
+            <button onClick={() => props.onClose ()}>X</button>
+         </div>
          <h2>{props.name}</h2>
          <h2>{props.species}</h2>
          <h2>{props.gender}</h2>
