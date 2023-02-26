@@ -8,7 +8,7 @@ export default function Cards(props) {
    const { characters } = props;
    return (
 
-   <div className = "Cards">
+   <div className = "cards">
    
       {
          characters.map((c) =>{
