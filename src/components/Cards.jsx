@@ -1,19 +1,20 @@
-
+import { Link } from 'react-router-dom';
 
 import Card from './Card';
 
-import './Cards.css'
+import styles from './Cards.module.css'
 
 export default function Cards(props) {
    const { characters } = props;
    return (
 
-   <div className = "cards">
+   <div className = {styles.cards}>
    
       {
          characters.map((c) =>{
             return(
             <Card
+            id= {c.id}
           name={c.name}
           species={c.species}
           gender={c.gender}

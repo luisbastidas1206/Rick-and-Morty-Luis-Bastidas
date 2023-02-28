@@ -13,9 +13,9 @@ export default function NavBar(props) {
         </div>
 
         <div>
-        
-            <button>Filter</button>
-        
+        <Link to="/about">
+            <button>About</button>
+        </Link>
         </div>
 
         <div>

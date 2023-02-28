@@ -1,12 +1,12 @@
 import './App.css';
 import React from 'react';
-import styles from './components/Card.jsx'
+//import styles from './components/Card.jsx'
 import Cards from './components/Cards.jsx';
 import NavBar from './components/NavBar.jsx';
 import About from './components/About.jsx';
 import Login from './components/Login';
 import Detail from './components/Detail.jsx';
-import characters from './data.js'
+//import characters from './data.js'
 import {Routes,Route} from "react-router-dom";
 
 function App () {

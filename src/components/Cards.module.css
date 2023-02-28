@@ -1,0 +1,9 @@
+.cards {
+  display: flex;
+  justify-content: center center;
+  padding: 10 px;
+  border: 8px solid rgba(57, 41, 111, 0.823);
+  box-shadow: 0 0 50px rgb(197, 8, 8);
+  border-radius: 10px;
+  transform: translateY(250px);
+}
