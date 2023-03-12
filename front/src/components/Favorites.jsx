@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import styles from "./Card.module.css";
 const favorites = (props) => {
   return (
-    <div>
+    <div key={props.id}>
       <h1>Tus gustos, no te juzgo</h1>
       {props.myFavorites.map((favorito) => {
         return (

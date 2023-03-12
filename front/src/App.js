@@ -32,7 +32,7 @@ React.useEffect(() => {
 }, [access]);
 
   function onSearch(id) {
-    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+    fetch(`http://localhost:3001/rickandmorty/onsearch/${id}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {
