@@ -23,3 +23,16 @@ img {
   border-radius: 8px;
   background-color: rgba(188, 41, 9, 0.823);
 }
+
+.favoritos {
+  border: 8px solid rgba(131, 12, 182, 0.823);
+  width: 15%;
+  margin: 20px;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgb(159, 103, 199);
+  background-color: rgb(131, 12, 182, 0.823);
+}
+.linck{
+  color: rgb(255, 255, 255);
+}

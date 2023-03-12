@@ -1,13 +1,14 @@
 import "./App.css";
 import React from "react";
-//import styles from './components/Card.jsx'
+import styles from './components/Card.jsx'
 import Cards from "./components/Cards.jsx";
 import NavBar from "./components/NavBar.jsx";
 import About from "./components/About.jsx";
 import Form from "./components/Form";
 import Detail from "./components/Detail.jsx";
-//import characters from './data.js'
+import characters from './data.js'
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import Favorites from "./components/Favorites";
 
 
 
@@ -26,6 +27,9 @@ function App() {
      navigate('/home');
   }
 }
+React.useEffect(() => {
+  !access && navigate('/');
+}, [access]);
 
   function onSearch(id) {
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
@@ -60,6 +64,7 @@ function App() {
         </div>
 
         <Routes>
+          <Route path="/favorites" element={<Favorites></Favorites>}></Route>
           <Route path="/" element={<Form login={login}/>}></Route>
           <Route
             path="/home"
