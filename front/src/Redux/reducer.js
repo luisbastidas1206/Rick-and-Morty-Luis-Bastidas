@@ -1,7 +1,8 @@
 import { ADD_FAVORITES, DELETE_FAVORITES } from "./action_type";
 
 const initialState={
-    myFavorites:[]
+    myFavorites:[],
+    allCharacters:[]
 }
 
 export default function rooReducer(state=initialState,{type,payload}){
@@ -9,7 +10,8 @@ export default function rooReducer(state=initialState,{type,payload}){
         case ADD_FAVORITES:
            return{ 
              ...state,
-             myFavorites: [...state.myFavorites, payload]
+             myFavorites: [...state.allCharacters, payload],
+             allCharacters: [...state.allCharacters, payload],
 
             
            }
@@ -19,11 +21,11 @@ export default function rooReducer(state=initialState,{type,payload}){
             })
             return{
                 ...state,
-                myFavorites: filtered
+                myFavorites: payload
             }
 
     
         default:
-            return state;
+            return {...state};
     }
 }

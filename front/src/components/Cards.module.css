@@ -6,4 +6,9 @@
   box-shadow: 0 0 50px rgb(197, 8, 8);
   border-radius: 10px;
   transform: translateY(250px);
+  flex-wrap: wrap;
+
+  /* background-image: url("../imagen/rick4.png");
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
