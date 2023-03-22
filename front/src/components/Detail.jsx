@@ -1,14 +1,11 @@
-import React from 'react'
-import styles from './Detail.module.css'
-import { useParams } from 'react-router-dom'
-
-
+import React from "react";
+import styles from "./Detail.module.css";
+import { useParams } from "react-router-dom";
 
 export default function Detail() {
+  const [character, setCharacter] = React.useState({});
 
-  const [character, setCharacter] = React.useState({})
-
-  const {detailId}= useParams()
+  const { detailId } = useParams();
 
   React.useEffect(() => {
     fetch(`http://localhost:3001/rickandmorty/detail/${detailId}`)
@@ -27,29 +24,23 @@ export default function Detail() {
   }, [detailId]);
 
   return (
-
     <div className={styles.detail}>
       <div className={styles.txt}>
         <h1>DETALLES:</h1>
-            <h1>NOMBRE: {character.name}</h1>
-            <h2>ESPECIE: {character.species}</h2>
-            <h2>GÉNERO: {character.gender}</h2>
-            <h2>STATUS: {character.status}</h2>
-            
-            <h2>ORIGEN: {character.origin?.name}</h2>
-            <br/>
-        </div>
+        <h1>NOMBRE: {character.name}</h1>
+        <h2>ESPECIE: {character.species}</h2>
+        <h2>GÉNERO: {character.gender}</h2>
+        <h2>STATUS: {character.status}</h2>
 
-        <div className={styles.img}>
-
-        <img src={character.image} alt={character.name} />
-
-        </div>
-
-
-
+        <h2>ORIGEN: {character.origin?.name}</h2>
+        <br />
       </div>
-  )
+
+      <div className={styles.img}>
+        <img src={character.image} alt={character.name} />
+      </div>
+    </div>
+  );
 }
 
 /*Name

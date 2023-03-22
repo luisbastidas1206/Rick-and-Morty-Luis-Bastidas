@@ -1,3 +1,3 @@
-const favoritos=[]
+const favoritos = [];
 
-module.exports = {favoritos}
+module.exports = { favoritos };

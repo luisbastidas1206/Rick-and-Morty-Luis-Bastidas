@@ -10,43 +10,33 @@ export default function Card(props) {
   const dispatch = useDispatch();
   useEffect(() => {});
 
-  const sexo=()=>{
-    if(props.gender==="Male"){
-       return "♂";
+  const sexo = () => {
+    if (props.gender === "Male") {
+      return "♂";
+    } else if (props.gender === "Female") {
+      return "♀";
+    } else {
+      return "⚧️";
     }
-    else if(props.gender==="Female"){
-       return "♀";
+  };
+  const raza = () => {
+    if (props.species === "Human") {
+      return "웃";
+    } else if (props.species === "Alien") {
+      return "👽";
+    } else if (props.species === "Robot") {
+      return "🤖";
+    } else if (props.species === "Animal") {
+      return "🐶";
+    } else if (props.species === "Mythological Creature") {
+      return "🐉";
+    } else if (props.species === "Disease") {
+      return "🦠";
+    } else {
+      return props.species;
     }
-    else{
-       return "⚧️";
-    }
- }
- const raza=()=>{
-    if(props.species==='Human'){
-       return '웃';
-    }
-    else if(props.species==='Alien'){
-       return '👽';
-    }
-    else if(props.species==='Robot'){
-       return '🤖';
+  };
 
-    }else if(props.species==='Animal'){
-      return '🐶';
-
-    }
-    else if(props.species==='Mythological Creature'){
-      return '🐉';
-
-    }
-    else if(props.species==='Disease'){
-      return '🦠';
-
-    }else{
-      return props.species
-   }
- }
- 
   function handleFavorites() {
     if (isFav) {
       setIsFav(false);

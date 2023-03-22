@@ -4,8 +4,7 @@ import { connect } from "react-redux";
 import styles from "./Card.module.css";
 
 const favorites = (props) => {
-
-/*  useEffect(()=>{
+  /*  useEffect(()=>{
     return (
       dispatch(orderCards('Ascendente')),
       ()=>{ dispatch(filterCards('none'))
@@ -13,21 +12,22 @@ const favorites = (props) => {
 })})*/
 
   return (
-    <div >
+    <div>
       <h1>Tus gustos, no te juzgo</h1>
       <div className={styles.flex}>
-      {props.myFavorites.map((favorito) => {
-        return (
-          <div className={styles.favoritos} key={props.id}>
-            <Link to={`/detail/${favorito.id}`}>
-              <h2>{favorito.name}</h2>
-              <h2>{favorito.species}</h2>
-              <h2>{favorito.gender}</h2>
-              <img src={favorito.image} alt={favorito.image} />
-            </Link>
-          </div>
-        );
-      })}</div>
+        {props.myFavorites.map((favorito) => {
+          return (
+            <div className={styles.favoritos} key={props.id}>
+              <Link to={`/detail/${favorito.id}`}>
+                <h2>{favorito.name}</h2>
+                <h2>{favorito.species}</h2>
+                <h2>{favorito.gender}</h2>
+                <img src={favorito.image} alt={favorito.image} />
+              </Link>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

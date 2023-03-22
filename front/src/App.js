@@ -1,16 +1,14 @@
 import "./App.css";
 import React from "react";
-import styles from './components/Card.jsx'
+import styles from "./components/Card.jsx";
 import Cards from "./components/Cards.jsx";
 import NavBar from "./components/NavBar.jsx";
 import About from "./components/About.jsx";
 import Form from "./components/Form";
 import Detail from "./components/Detail.jsx";
-import characters from './data.js'
+import characters from "./data.js";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Favorites from "./components/Favorites";
-
-
 
 function App() {
   const [characters, setCharacters] = React.useState([]);
@@ -18,18 +16,18 @@ function App() {
   const navigate = useNavigate();
   const [access, setAccess] = React.useState(false);
 
-  const username = "Patricio@gmail.com"
-  const password = "luis01ñ"
+  const username = "Patricio@gmail.com";
+  const password = "luis01ñ";
 
   function login(userData) {
-  if (userData.password === password && userData.username === username) {
-     setAccess(true);
-     navigate('/home');
+    if (userData.password === password && userData.username === username) {
+      setAccess(true);
+      navigate("/home");
+    }
   }
-}
-React.useEffect(() => {
-  !access && navigate('/');
-}, [access]);
+  React.useEffect(() => {
+    !access && navigate("/");
+  }, [access]);
 
   function onSearch(id) {
     fetch(`http://localhost:3001/rickandmorty/onsearch/${id}`)
@@ -65,7 +63,7 @@ React.useEffect(() => {
 
         <Routes>
           <Route path="/favorites" element={<Favorites></Favorites>}></Route>
-          <Route path="/" element={<Form login={login}/>}></Route>
+          <Route path="/" element={<Form login={login} />}></Route>
           <Route
             path="/home"
             element={<Cards characters={characters} onClose={onClose} />}

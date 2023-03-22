@@ -1,6 +1,9 @@
-var { favoritos } = require ("../utils/favs")
+var { favoritos } = require("../utils/favs");
 
-let deleteFav = (id)=>{favoritos.filter((frank)=>{
-    return frank.id !== id})}
+let deleteFav = (id) => {
+  favoritos.filter((frank) => {
+    return frank.id !== id;
+  });
+};
 
 module.exports = { deleteFav };
